@@ -19,7 +19,7 @@ module.exports = function (app) {
     .get(function (req, res){
     // console.log(req.query.stock)
     if(typeof req.query.stock==='string'){//jika 1 query stocknya
-      axios.get('https://repeated-alpaca.glitch.me/v1/stock/'+req.query.stock+'/quote')
+      axios.get('https://stock-price-checker-proxy.freecodecamp.rocks/v1/stock/'+req.query.stock+'/quote')
       .catch((err)=>{
         console.log(err);
       })
@@ -74,7 +74,7 @@ module.exports = function (app) {
         })
       });
     }else{//jika 2 query stocknya
-      axios.get('https://repeated-alpaca.glitch.me/v1/stock/'+req.query.stock[0]+'/quote')
+      axios.get('https://stock-price-checker-proxy.freecodecamp.rocks/v1/stock/'+req.query.stock[0]+'/quote')
       .catch((err)=>{
         console.log(err);
       })
@@ -83,7 +83,7 @@ module.exports = function (app) {
         return result;
       })
       .then((result)=>{
-        return axios.get('https://repeated-alpaca.glitch.me/v1/stock/'+req.query.stock[1]+'/quote')
+        return axios.get('https://stock-price-checker-proxy.freecodecamp.rocks/v1/stock/'+req.query.stock[1]+'/quote')
         .catch((err)=>{
           console.log(err);
         })

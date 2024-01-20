@@ -10,7 +10,7 @@ var fccTestingRoutes  = require('./routes/fcctesting.js');
 var runner            = require('./test-runner');
 var helmet=require('helmet');
 var mongoose = require('mongoose');
-var connectionUrl='mongodb+srv://jordy:jordy123@cluster0.3vbuv.mongodb.net/<dbname>?retryWrites=true&w=majority';
+var connectionUrl='mongodb+srv://shyamkathir:Shyamsharmi007@cluster0.byojbkp.mongodb.net/freecodecamp?retryWrites=true&w=majority';
 var app = express();
 mongoose.connect(connectionUrl,({useNewUrlParser:true, useUnifiedTopology:true}))
 .then(()=>{
