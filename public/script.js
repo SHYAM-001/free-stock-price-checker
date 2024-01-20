@@ -1,7 +1,7 @@
 $(function() {
     console.log("script run")
     $('#testForm').submit(function(e) {
-
+      e.preventDefault();
       console.log('testForm 1 submitted');
       $('#jsonResult').html('Fetching Data..');
       $.ajax({
@@ -17,6 +17,7 @@ $(function() {
     });
 
     $('#testForm2').submit(function(e) {
+      e.preventDefault();
       $('#jsonResult').html('Fetching Data..');
       console.log('testForm 2 submitted');
       $.ajax({
